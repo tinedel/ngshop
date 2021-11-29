@@ -1,0 +1,15 @@
+<p>Name: {{product.name}}</p>
+<p>Details: {{product.details}}</p>
+<p>Price: {{product.price}}</p>
+<div>
+  <label for="name">Quantity: </label>
+  <input id="name" [(ngModel)]="product.quantity" placeholder="quantity">
+</div>
+
+<ul class="products">
+  <li *ngFor="let product of products" (click)="changeProduct(product)">
+    {{product.name}}
+  </li>
+</ul>
+
+<button (click)="checkout()">Checkout</button>
